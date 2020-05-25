@@ -1,0 +1,28 @@
+.sensors {
+
+}
+
+.sensors-title {
+  background-color: $blueColor;
+  padding: 20px;
+  color: $whiteColor;
+  text-align: center;
+}
+
+.sensors-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sensor-item {
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+  background-color: $blackColor;
+  color: $whiteColor;
+  flex-grow: 1;
+
+  &.active {
+    background-color: $redColor;
+  }
+}

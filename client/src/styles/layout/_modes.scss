@@ -1,0 +1,32 @@
+.modes {
+
+}
+
+.modes-title {
+  background-color: $blueColor;
+  padding: 20px;
+  color: $whiteColor;
+  text-align: center;
+}
+
+.modes-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modes-item {
+  text-align: center;
+  width: calc(100% / 3);
+}
+
+.modes-btn {
+  background-color: $blackColor;
+  padding: 20px;
+  width: 100%;
+  color: $whiteColor;
+  font-size: 16px;
+
+  &.active {
+    background-color: $violetColor;
+  }
+}

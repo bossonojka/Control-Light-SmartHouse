@@ -1,0 +1,28 @@
+.lighters {
+
+}
+
+.lighters-title {
+  background-color: $blueColor;
+  padding: 20px;
+  color: $whiteColor;
+  text-align: center;
+}
+
+.lighters-list {
+  background-color: $blackColor;
+  color: $whiteColor;
+}
+
+.lighters-item {
+  display: flex;
+  justify-content: center;
+}
+
+.lighters-name, .lighters-control {
+  padding: 20px;
+}
+
+.lighters-range {
+  display: block;
+}

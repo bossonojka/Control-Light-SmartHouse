@@ -1,0 +1,59 @@
+.model {
+  padding-top: 40px;
+}
+
+.model-content {
+  position: relative;
+}
+
+.model-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.model-lighters {
+
+}
+
+.model-lighter {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $blackColor;
+  border: 4px solid $orangeColor;
+
+  &.active {
+    background-color: $goldColor;
+  }
+}
+
+.model-lighter-1 {
+  top: 180px;
+  left: 270px;
+}
+
+.model-lighter-2 {
+  top: 145px;
+  left: 480px;  
+}
+
+.model-lighter-3 {
+  top: 170px;
+  left: 655px;
+}
+
+.model-lighter-4 {
+  top: 175px;
+  left: 820px;
+}
+
+.model-lighter-5 {
+  top: 390px;
+  left: 640px;
+}
+
+.model-lighter-6 {
+  top: 520px;
+  left: 295px;
+}

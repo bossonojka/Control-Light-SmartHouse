@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  margin: 0 -10px;
+  align-items: center;
+}
+
+.nav-title {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 0;
+  color: $blackColor;
+}
+
+.nav-item {
+  padding: 0 10px;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  color: $blackColor;
+  
+  &.active {
+    color: $whiteColor;
+    background-color: $blackColor;
+  }
+}

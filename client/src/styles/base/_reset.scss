@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  outline: 0;
+  color: #000;
+  text-decoration: none;
+  display: block;
+}
+
+button {
+  outline: 0;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $violetColor;
+    transition: 0.3s;
+  }
+}

@@ -1,0 +1,34 @@
+.info {
+  padding-bottom: 40px;
+}
+
+.info-title {
+  background-color: $blueColor;
+  padding: 20px;
+  color: $whiteColor;
+  text-align: center;
+}
+
+.info-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.info-head-column, .info-body-column {
+  text-align: left;
+  padding: 20px;
+}
+
+tbody .info-row:nth-child(odd) {
+  background-color: #f2f2f2
+}
+
+.info-head-column {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.info-control {
+  padding: 5px;
+  width: 50%;
+}
