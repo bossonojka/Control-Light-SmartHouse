@@ -70,10 +70,10 @@ const drawGraph = (val) => {
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
           label: 'Lighter 1',
-          data: [0.5, 0.48, 0.4, 0.19, 0.86],
+          data: [0.5, 0.48, 0.4, 0.19, 0.86, 0.54],
           backgroundColor: [
             'rgba(0, 137, 132, .2)',
           ],
@@ -94,10 +94,10 @@ const drawGraph = (val) => {
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
           label: 'Lighter 2',
-          data: [0.4, 0.5, 0.6, 0.9, 0.5],
+          data: [0.4, 0.5, 0.6, 0.9, 0.5, 0.45],
           backgroundColor: [
             'rgba(130, 120, 10, .2)',
           ],
@@ -119,10 +119,10 @@ const drawGraph = (val) => {
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
           label: 'Lighter 3',
-          data: [0.280, 0.40, 0.60, 0.65, 0.6, 0.5, 0.45],
+          data: [0.28, 0.40, 0.60, 0.65, 0.6, 0.5],
           backgroundColor: [
             'rgba(0, 137, 132, .2)',
           ],
@@ -143,10 +143,10 @@ const drawGraph = (val) => {
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
           label: 'Lighter 4',
-          data: [0.3, 0.4, 0.6, 0.7, 0.8, 0.5, 0.45],
+          data: [0.3, 0.4, 0.6, 0.7, 0.8, 0.5],
           backgroundColor: [
             'rgba(0, 137, 132, .2)',
           ],
@@ -167,10 +167,10 @@ const drawGraph = (val) => {
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
           label: 'Lighter 5',
-          data: [0.28, 0.4, 0.6, 0.65, 0.6, 0.54, 0.7],
+          data: [0.28, 0.4, 0.6, 0.65, 0.6, 0.54],
           backgroundColor: [
             'rgba(0, 137, 132, .2)',
           ],
@@ -191,10 +191,10 @@ const drawGraph = (val) => {
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
           label: 'Lighter 6',
-          data: [0.7, 0.45, 0.6, 0.8, 0.6, 0.5, 0.4],
+          data: [0.7, 0.45, 0.6, 0.8, 0.6, 0.5],
           backgroundColor: [
             'rgba(0, 137, 132, .2)',
           ],
