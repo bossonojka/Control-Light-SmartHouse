@@ -1,5 +1,6 @@
 import './styles/main.scss';
 
+import Chart from 'chart.js';
 import socket from './controllers/Socket';
 
 import LightersController from './controllers/Lighters';
@@ -29,17 +30,195 @@ socket.on('sensor triggered', async (sensor) => {
 socket.on('mode changed', async () => {
   await lightersController.update();
   await brightnessController.render();
-  // if (mode.name === 'manual') {
-  //   await lightersController.manual();
-  // }
 });
 
 socket.on('power changed', async (lighter) => {
   await infoController.updatePowerConsumption(lighter);
 });
 
+const statisticsControl = document.querySelector('.statisticts-control');
+
+const drawGraph = (val) => {
+  console.log(val);
+  const ctx = document.querySelector('.statistics-chart').getContext('2d');
+
+  if (val === '0') {
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+          label: '',
+          data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+          backgroundColor: [
+            'rgba(0, 137, 132, .2)',
+          ],
+          borderColor: [
+            'rgba(0, 10, 130, .7)',
+          ],
+          borderWidth: 2,
+        },
+        ],
+      },
+      options: {
+        responsive: true,
+      },
+    });
+  }
+
+  if (val === '1') {
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May'],
+        datasets: [{
+          label: 'Lighter 1',
+          data: [0.5, 0.48, 0.4, 0.19, 0.86],
+          backgroundColor: [
+            'rgba(0, 137, 132, .2)',
+          ],
+          borderColor: [
+            'rgba(0, 10, 130, .7)',
+          ],
+          borderWidth: 2,
+        },
+        ],
+      },
+      options: {
+        responsive: true,
+      },
+    });
+  }
+
+  if (val === '2') {
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May'],
+        datasets: [{
+          label: 'Lighter 2',
+          data: [0.4, 0.5, 0.6, 0.9, 0.5],
+          backgroundColor: [
+            'rgba(130, 120, 10, .2)',
+          ],
+          borderColor: [
+            'rgba(130, 130, 10, .7)',
+          ],
+          borderWidth: 2,
+        },
+        ],
+      },
+      options: {
+        responsive: true,
+      },
+    });
+  }
+
+
+  if (val === '3') {
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'Lighter 3',
+          data: [0.280, 0.40, 0.60, 0.65, 0.6, 0.5, 0.45],
+          backgroundColor: [
+            'rgba(0, 137, 132, .2)',
+          ],
+          borderColor: [
+            'rgba(0, 10, 130, .7)',
+          ],
+          borderWidth: 2,
+        },
+        ],
+      },
+      options: {
+        responsive: true,
+      },
+    });
+  }
+
+  if (val === '4') {
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'Lighter 4',
+          data: [0.3, 0.4, 0.6, 0.7, 0.8, 0.5, 0.45],
+          backgroundColor: [
+            'rgba(0, 137, 132, .2)',
+          ],
+          borderColor: [
+            'rgba(0, 10, 130, .7)',
+          ],
+          borderWidth: 2,
+        },
+        ],
+      },
+      options: {
+        responsive: true,
+      },
+    });
+  }
+
+  if (val === '5') {
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'Lighter 5',
+          data: [0.28, 0.4, 0.6, 0.65, 0.6, 0.54, 0.7],
+          backgroundColor: [
+            'rgba(0, 137, 132, .2)',
+          ],
+          borderColor: [
+            'rgba(0, 10, 130, .7)',
+          ],
+          borderWidth: 2,
+        },
+        ],
+      },
+      options: {
+        responsive: true,
+      },
+    });
+  }
+
+  if (val === '6') {
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'Lighter 6',
+          data: [0.7, 0.45, 0.6, 0.8, 0.6, 0.5, 0.4],
+          backgroundColor: [
+            'rgba(0, 137, 132, .2)',
+          ],
+          borderColor: [
+            'rgba(0, 10, 130, .7)',
+          ],
+          borderWidth: 2,
+        },
+        ],
+      },
+      options: {
+        responsive: true,
+      },
+    });
+  }
+};
+
+statisticsControl.onchange = (e) => {
+  drawGraph(e.target.value);
+};
+
 lightersController.render();
 sensorsController.render();
 modesController.render();
 brightnessController.render();
 infoController.render();
+drawGraph('0');
