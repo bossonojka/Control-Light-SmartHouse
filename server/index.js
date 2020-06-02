@@ -86,6 +86,7 @@ io.on('connection', async (socket) => {
   const intervalId = setInterval(async () => {
     const lighters = await LightersService.getLighters();
     const lightersWithCurrentPower = [];
+    let totalConsumption = 0;
 
     lighters.forEach((lighter) => {
       const {
@@ -102,9 +103,10 @@ io.on('connection', async (socket) => {
 
       if (status) {
         result = Math.round((brightness * power) / 100) - inaccuracy;
+        totalConsumption += result;
       }
 
-      lightersWithCurrentPower.push({ id, power: result });
+      lightersWithCurrentPower.push({ id, power: result, total: totalConsumption });
     });
 
     socket.emit(powerChanged, lightersWithCurrentPower);
