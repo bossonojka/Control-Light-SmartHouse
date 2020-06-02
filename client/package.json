@@ -2,7 +2,7 @@
   "name": "webpack-conf",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --mode=development --open Firefox",
+    "start": "webpack-dev-server --mode=development",
     "watch": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
     "open": "webpack-dev-server --open "
