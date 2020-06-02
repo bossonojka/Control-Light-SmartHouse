@@ -24,7 +24,6 @@ const infoController = new InfoController(infoTableList);
 socket.on('sensor triggered', async (sensor) => {
   sensorsController.update(sensor);
   await lightersController.updateBySensor(sensor);
-  console.log(sensor);
 });
 
 socket.on('mode changed', async () => {
@@ -32,14 +31,13 @@ socket.on('mode changed', async () => {
   await brightnessController.render();
 });
 
-socket.on('power changed', async (lighter) => {
-  await infoController.updatePowerConsumption(lighter);
+socket.on('power changed', async (lighters) => {
+  await infoController.updatePowerConsumption(lighters);
 });
 
 const statisticsControl = document.querySelector('.statisticts-control');
 
 const drawGraph = (val) => {
-  console.log(val);
   const ctx = document.querySelector('.statistics-chart').getContext('2d');
 
   if (val === '0') {

@@ -26,8 +26,6 @@ export default class LightersService {
       body: JSON.stringify({ status }),
     };
 
-    console.log(options);
-
     const responce = await fetch(`${this.path}/${id}/status`, options);
 
     if (!responce.ok) {
@@ -47,8 +45,6 @@ export default class LightersService {
       },
       body: JSON.stringify(body),
     };
-
-    console.log(options);
 
     const responce = await fetch(`${this.path}/${id}`, options);
     const result = await responce.json();

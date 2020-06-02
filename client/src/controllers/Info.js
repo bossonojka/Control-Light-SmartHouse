@@ -72,6 +72,7 @@ export default class BrightnessController {
   }
 
   async updatePowerConsumption(lighters) {
+    const total = document.querySelector('.info-total-number');
     this.list.childNodes.forEach((element, i) => {
       const row = element;
       const elementId = Number(row.dataset.id);
@@ -79,6 +80,8 @@ export default class BrightnessController {
       if (elementId === lighters[i].id) {
         const span = row.querySelector('.info-power');
         span.textContent = `${lighters[i].power} W/h`;
+
+        total.textContent = `${lighters[i].total} W/h`;
       }
     });
   }

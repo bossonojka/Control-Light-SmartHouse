@@ -56,7 +56,6 @@ export default class LightersController {
 
   async update() {
     const lighters = await lightersService.getLighters();
-    console.log(lighters);
     lighters.forEach((lighter) => {
       const { id, status, brightness } = lighter;
 

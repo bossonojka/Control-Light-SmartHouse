@@ -26,8 +26,6 @@ export default class ModesService {
       body: JSON.stringify({ name: mode }),
     };
 
-    console.log(options);
-
     const responce = await fetch(this.path, options);
     const result = await responce.json();
 
